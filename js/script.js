@@ -69,13 +69,16 @@ btn.addEventListener('click', () => {
 	clickcount++;
 	if (clickcount % 2 == 0) {
 		fire(2);
+		fire(2);
 	}
 	else if(clickcount == 3) {
 		pid.innerText = myname;
 		ptag.style.display = 'block';
 		fire(3);
+		fire(3);
 	}
 	else {
+		fire(1);
 		fire(1);
 	}
 });
@@ -99,4 +102,4 @@ function randomColor() {
 
 setInterval(() => {
 	fire(0.5);
-}, 1000);
+}, 1500);
