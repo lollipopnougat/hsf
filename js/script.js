@@ -80,7 +80,6 @@ btn.addEventListener('click', () => {
 		pid.innerText = myname;
 		ptag.style.display = 'block';
 		fire(3);
-		fire(3);
 	}
 	else {
 		fire(1);
