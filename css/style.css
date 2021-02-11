@@ -58,7 +58,7 @@ button:focus {
 	text-align: center;
 	display: none;
 	width: 100vw;
-	top: 10%;
+	top: 20%;
 	position: fixed;
 	transition: all ease-in-out 0.2s;
 }
@@ -108,3 +108,28 @@ button:focus {
 		opacity: 0;
 	}
 }
+
+.foot {
+	display: block;
+	width: 100%;
+	text-align: center;
+	position: fixed;
+	bottom: 5%;
+}
+
+.foot a, .foot a:link,.foot a:visited {
+	color: #555;
+	user-select: none;
+	transition: all ease-in-out 0.2s;
+	text-decoration: none;
+
+}
+
+.foot a:hover {
+	color: #777;
+}
+
+.foot a:active {
+	color: #3bf0e4;
+}
+

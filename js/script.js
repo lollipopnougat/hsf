@@ -70,13 +70,13 @@ btn.addEventListener('click', () => {
 	if (clickcount % 2 == 0) {
 		fire(2);
 	}
-	else {
-		fire(1);
-	}
-	if(clickcount == 3) {
+	else if(clickcount == 3) {
 		pid.innerText = myname;
 		ptag.style.display = 'block';
 		fire(3);
+	}
+	else {
+		fire(1);
 	}
 });
 
