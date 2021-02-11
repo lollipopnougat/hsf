@@ -20,7 +20,7 @@ button {
 	color: white;
 	cursor: pointer;
 	padding: 1rem 2rem;
-	position: relative;
+	position: fixed;
 	transition: transform 0.1s linear, box-shadow 0.1s linear;
 	font-size: 18px;
 	z-index: 10;

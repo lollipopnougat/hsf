@@ -41,8 +41,8 @@ function fire() {
 			let dy = randint(0, 50);
 			const xs = radius * Math.cos(rad) - dx + 'px'; //Math.random() * 240 - 100 + 'px';
 			const ys = radius * Math.sin(rad) - dy + 'px'; //Math.random() * 240 - 100 + 'px';
-			console.log('xs', xs);
-			console.log('ys', ys);
+			//console.log('xs', xs);
+			//console.log('ys', ys);
 			innerP.style.setProperty('--x', `calc(${x} + ${xs})`);
 			innerP.style.setProperty('--y', `calc(${y} + ${ys})`);
 			innerP.style.animationDuration = Math.random() * 300 + 200 + 'ms';
