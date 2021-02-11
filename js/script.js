@@ -4,13 +4,14 @@ const btn = document.getElementById('btn');
 const mname = location.href.split('html?name=')[1];
 const ptag = document.getElementById('ptag');
 const pid = document.getElementById('pid');
+const reg = new RegExp('&', 'g');
 
 let myname = '祝春节快乐哦!'; // = unescape();
 let clickcount = 0;
 
 
 if (mname) {
-	myname = unescape(mname) + ', ' + myname;
+	myname = unescape(mname.replace(reg, '%')) + ', ' + myname;
 }
 
 function fire(size) {
