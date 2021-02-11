@@ -67,11 +67,15 @@ function fire(size) {
 btn.addEventListener('click', () => {
 	
 	clickcount++;
-	if (clickcount % 2 == 0) {
+	if (clickcount == 2) {
+		btn.innerText = '点击查看祝福';
+	}
+	else if (clickcount % 2 == 0) {
 		fire(2);
 		fire(2);
 	}
 	else if(clickcount == 3) {
+		btn.innerText = '春节快乐啊我的朋友!';
 		pid.innerText = myname;
 		ptag.style.display = 'block';
 		fire(3);
