@@ -1,5 +1,7 @@
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -19,10 +21,10 @@ button {
 	border: none;
 	color: white;
 	cursor: pointer;
-	padding: 1rem 2rem;
+	padding: 2rem 4rem;
 	position: fixed;
-	transition: transform 0.1s linear, box-shadow 0.1s linear;
-	font-size: 18px;
+	transition: all 0.1s linear, box-shadow 0.1s linear;
+	font-size: 36pt;
 	z-index: 10;
 }
 
@@ -50,6 +52,46 @@ button:focus {
 
 .particle.move {
 	animation: move 1000ms linear forwards;
+}
+
+.ptag {
+	text-align: center;
+	display: none;
+	width: 100vw;
+	top: 10%;
+	position: fixed;
+	transition: all ease-in-out 0.2s;
+}
+
+@keyframes gradient-shift {
+	0% {
+		background-position: 100% 50%;
+	}
+
+	50% {
+		background-position: 300% 50%;
+	}
+
+	100% {
+		background-position: 500% 50%;
+	}
+}
+
+.ptag p {
+	color: #fff;
+	font-weight: 800;
+	font-size: 36pt;
+	background: linear-gradient(264.51deg, #ffe580 4.38%, #ff7571 11.51%, #ff7270 25.06%, #ea5dad 36.04%, #c2a0fd 47.63%, #9867f0 59.03%, #3bf0e4 69.96%, #33ce43 83.74%, #b2f4b6 95.62%, #dff4b2 95.62%, #ffe580 4.38%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-position: 50% 50%;
+    background-size: 500%;
+    background-clip: text;
+    -webkit-animation: gradient-shift 20s cubic-bezier(0, 0, 1, 1) infinite;
+    animation: gradient-shift 20s cubic-bezier(0, 0, 1, 1) infinite;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all ease-in-out 0.2s;
 }
 
 

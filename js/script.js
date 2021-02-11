@@ -2,14 +2,18 @@
 
 const btn = document.getElementById('btn');
 const mname = location.href.split('html?name=')[1];
-let myname = ''; // = unescape();
+const ptag = document.getElementById('ptag');
+const pid = document.getElementById('pid');
+
+let myname = '祝春节快乐哦!'; // = unescape();
+let clickcount = 0;
 
 
 if (mname) {
-	btn.innerText = unescape(mname) + ', 春节快乐!';
+	myname = unescape(mname) + ', ' + myname;
 }
 
-function fire() {
+function fire(size) {
 	const particles = [];
 	const color = randomColor();
 
@@ -30,12 +34,12 @@ function fire() {
 	particles.push(particle);
 
 	setTimeout(() => {
-		let nums = Math.floor(Math.random() * 500);
+		let nums = Math.floor(Math.random() * 500) * size;
 		for (let i = 0; i < nums; i++) {
 			const innerP = document.createElement('span');
 			innerP.classList.add('particle', 'move');
 			innerP.style.transform = `translate(${x}, ${y})`;
-			let radius = randint(0, 240);
+			let radius = randint(0, 240) * size;
 			let rad = randint(0, 360) / 180 * Math.PI;
 			let dx = randint(0, 50);
 			let dy = randint(0, 50);
@@ -61,7 +65,19 @@ function fire() {
 }
 
 btn.addEventListener('click', () => {
-	fire();
+	
+	clickcount++;
+	if (clickcount % 2 == 0) {
+		fire(2);
+	}
+	else {
+		fire(1);
+	}
+	if(clickcount == 3) {
+		pid.innerText = myname;
+		ptag.style.display = 'block';
+		fire(3);
+	}
 });
 
 function randomLocation() {
@@ -82,5 +98,5 @@ function randomColor() {
 
 
 setInterval(() => {
-	fire();
-}, 500);
+	fire(0.5);
+}, 1000);
