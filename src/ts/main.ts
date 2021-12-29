@@ -4,9 +4,9 @@ import Random from './Random';
 // when animating on canvas, it is best to use requestAnimationFrame instead of setTimeout or setInterval
 // not supported in all browsers though and sometimes needs a prefix, so we need a shim
 
-class Data {
-    public static ctx: CanvasRenderingContext2D;
-}
+// class Data {
+//     public static ctx: CanvasRenderingContext2D;
+// }
 
 window.requestAnimFrame = (() => {
     return window.requestAnimationFrame ||
@@ -20,7 +20,7 @@ window.requestAnimFrame = (() => {
 // now we will setup our basic variables for the demo
 const canvas = document.getElementById('canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d')!;
-Data.ctx = ctx;
+//Data.ctx = ctx;
 ctx.globalAlpha = 0;
 // full screen dimensions
 const cw = window.innerWidth;
@@ -93,7 +93,7 @@ function showTimer(msecond: number) {
 
 // main demo loop
 function loop() {
-    const ctx = Data.ctx;
+    //const ctx = Data.ctx;
     // this function will run endlessly with requestAnimationFrame
     window.requestAnimFrame!(loop);
 
