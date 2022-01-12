@@ -15,8 +15,32 @@ canvas {
 	text-align: center;
 	width: 100%;
 	position: fixed;
-	top: 10px;
+	top: 30%;
 	z-index: 1;
+	user-select: none;
+}
+
+
+
+@keyframes fade {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.tips {
+	display: block;
+	text-align: center;
+	width: 100%;
+	position: fixed;
+	top: 10%;
+	color: #ffe580;
+	font-size: 48pt;
+	user-select: none;
+	/* animation: fade 3s cubic-bezier(0, 0, 1, 1) infinite; */
 }
 
 @keyframes gradient-shift {
@@ -49,7 +73,7 @@ canvas {
 
 .headline {
 	margin-top: 300px;
-	font-size: 72pt;
+	font-size: 96pt;
 	background: linear-gradient(264.51deg, #ffe580 4.38%, #ff7571 11.51%, #ff7270 25.06%, #ea5dad 36.04%, #c2a0fd 47.63%, #9867f0 59.03%, #3bf0e4 69.96%, #33ce43 83.74%, #b2f4b6 90.62%, #dff4b2 95.62%, #ffe580 99.38%);
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
@@ -66,7 +90,7 @@ canvas {
 
 .headline2 {
 	margin-top: 300px;
-	font-size: 72pt;
+	font-size: 128pt;
 	background: linear-gradient(264.51deg, #ffe580 4.38%, #ff7571 11.51%, #ff7270 25.06%, #ea5dad 36.04%, #c2a0fd 47.63%, #9867f0 59.03%, #3bf0e4 69.96%, #33ce43 83.74%, #b2f4b6 90.62%, #dff4b2 95.62%, #ffe580 99.38%);
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
