@@ -45,6 +45,7 @@ const div = document.getElementById('con') as HTMLDivElement;
 const h1 = document.getElementById('head') as HTMLHeadingElement;
 const h2 = document.getElementById('head2') as HTMLHeadingElement;
 const player = document.getElementById('bgMusic') as HTMLAudioElement;
+const tips = document.getElementById('tips') as HTMLDivElement;
 // set canvas dimensions
 canvas.width = cw;
 canvas.height = ch;
@@ -216,5 +217,9 @@ canvas.addEventListener('touchmove', (e) => {
 window.onload = () => {
 
     loop();
+    tips.style.animation = 'fade 3s cubic-bezier(0, 0, 1, 1) infinite';
+    setTimeout(() => {
+        tips.style.display = 'none';
+    }, 2900);
 };
 
