@@ -46,6 +46,8 @@ const h1 = document.getElementById('head') as HTMLHeadingElement;
 const h2 = document.getElementById('head2') as HTMLHeadingElement;
 const player = document.getElementById('bgMusic') as HTMLAudioElement;
 const tips = document.getElementById('tips') as HTMLDivElement;
+const imgdiv = document.getElementById('imgdiv') as HTMLDivElement;
+const img = document.getElementById('img') as HTMLImageElement;
 // set canvas dimensions
 canvas.width = cw;
 canvas.height = ch;
@@ -65,11 +67,29 @@ function setName() {
     h1.innerText = name;
     h2.innerText = '春节快乐!';
     div.style.display = 'block';
-    //player.loop = true;
     
+    //player.loop = true;
+    setTimeout(() => {
+        h1.innerText = '祝虎年';
+        h2.innerText = '幸福平安!';
+    }, 3500);
+    setTimeout(() => {
+        h1.innerText = '财源广进!';
+        h2.innerText = '万事如意!';
+        //img.style.width = '600px';
+        //img.style.height = '600px';
+    }, 4100);
     setTimeout(() => {
         div.style.display = 'none';
         h2.innerText = '';
+        img.style.width = '500px';
+        img.style.height = '500px';
+        imgdiv.style.display = 'block';
+        //img.style.width = '700px';
+        //img.style.height = '700px';
+    }, 4700);
+    setTimeout(() => {
+        imgdiv.style.display = 'none';
         once = true;
         //player.pause();
     }, 7000);
