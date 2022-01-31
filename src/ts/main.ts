@@ -51,6 +51,12 @@ const img = document.getElementById('img') as HTMLImageElement;
 // set canvas dimensions
 canvas.width = cw;
 canvas.height = ch;
+const words = {
+    one: ['心想事成!', '万事如意!', '幸福平安!', '五福临门!'],
+    two: ['财源广进!', '年年有余', '招财进宝!', '财源滚滚!'],
+    three: ['名贯群伦!', '吉星高照!', '福寿安康!', '前程万里!']
+};
+
 
 function setName() {
     const nameurl = location.href.split('?n=')[1];
@@ -83,28 +89,41 @@ function setName() {
     //player.loop = true;
     setTimeout(() => {
         h1.innerText = '祝虎年';
-        h2.innerText = '幸福平安!';
-    }, 3500);
+        h2.innerText = words.one[Random.randint(0, 3)];
+    }, 2200);
     setTimeout(() => {
-        h1.innerText = '财源广进!';
-        h2.innerText = '万事如意!';
+        h1.innerText = words.two[Random.randint(0, 3)];
+        h2.innerText = words.three[Random.randint(0, 3)];
         //img.style.width = '600px';
         //img.style.height = '600px';
-    }, 4100);
+    }, 4000);
     setTimeout(() => {
         div.style.display = 'none';
         h2.innerText = '';
-        img.style.width = '500px';
-        img.style.height = '500px';
+        img.style.width = '400px';
+        img.style.height = '400px';
         imgdiv.style.display = 'block';
         //img.style.width = '700px';
         //img.style.height = '700px';
-    }, 4700);
+    }, 5600);
+    setTimeout(() => {
+        img.style.width = '500px';
+        img.style.height = '500px';
+        //img.style.width = '700px';
+        //img.style.height = '700px';
+        for(let i = 0; i < 20; i++) {
+            Firework.fireworks.push(new Firework(cw / 2, ch, Random.random(0, cw), Random.random(0, ch / 2)));
+        }
+    }, 6100);
+    // setTimeout(() => {
+        
+
+    // }, 6100);
     setTimeout(() => {
         imgdiv.style.display = 'none';
         once = true;
         //player.pause();
-    }, 7000);
+    }, 8200);
 }
 
 function showTimer(msecond: number) {
@@ -204,7 +223,7 @@ canvas.addEventListener('mouseup', (e) => {
         dx = Math.abs(dx);
         if (dx > cw / 2) {
             once = false;
-            showTimer(5000);
+            showTimer(3000);
             // setTimeout(() => {
             //     setName();
             // }, 5000);
