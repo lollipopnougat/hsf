@@ -53,11 +53,23 @@ canvas.width = cw;
 canvas.height = ch;
 
 function setName() {
-    const nameurl = location.href.split('html?n=')[1];
-    const reg = new RegExp('&', 'g');
+    const nameurl = location.href.split('?n=')[1];
     let name: string;
+
     if (nameurl) {
-        name = decodeURI(nameurl.replace(reg, '%'));
+        const reg = /&/g;
+        if (reg.test(nameurl)) {
+            name = decodeURI(nameurl.replace(reg, '%'));
+        }
+        else {
+            let tmp: string[] = [];
+            for (let i = 0; i < nameurl.length; i += 2) {
+                tmp.push(nameurl.substring(i, i + 2));
+            }
+            tmp.unshift('');
+            name = decodeURI(tmp.join('%'));
+        }
+        // name = decodeURI(nameurl.replace(reg, '%'));
     }
     else {
         name = '我的朋友';
@@ -67,7 +79,7 @@ function setName() {
     h1.innerText = name;
     h2.innerText = '春节快乐!';
     div.style.display = 'block';
-    
+
     //player.loop = true;
     setTimeout(() => {
         h1.innerText = '祝虎年';
@@ -101,15 +113,15 @@ function showTimer(msecond: number) {
     player.play();
     div.style.display = 'block';
     let len = Math.floor(msecond / 1000);
-    let handle = setInterval(()=>{
+    let handle = setInterval(() => {
         h2.innerText = len.toFixed(0);
         len--;
-        if(len < 0) {
+        if (len < 0) {
             clearInterval(handle);
             setName();
         }
     }, 1000);
-    
+
 }
 
 // main demo loop
