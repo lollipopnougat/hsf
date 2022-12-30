@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'fusion-pixel';
+  src: url('../fonts/fusion-pixel.ttf');
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 45deg;
+  inherits: false;
+}
+
+body {
+  background: #202023;
+}
+
+
+
+span {
+  text-align: center;
+  font-family: 'fusion-pixel';
+  font-size: 128px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  user-select: none;
+}
+
+.sub span {
+  font-size: 72px;
+}
+
+@keyframes waves {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.sub-fi {
+  background-image: linear-gradient(255deg, #f7b551, #ec6b42);
+  animation: waves 5s ease-in-out infinite;
+}
+
+.sub-se {
+  background-image: linear-gradient(150deg, #556fb5, #16b2b1);
+  animation: waves 5s ease-in-out 0.5s infinite;
+}
+
+.sub-th {
+  background-image: linear-gradient(255deg, #32b16c, #f7f25c);
+  animation: waves 5s ease-in-out 1s infinite;
+}
+
+.sub-fo {
+  background-image: linear-gradient(150deg, #8958a1, #e86878);
+  animation: waves 5s ease-in-out 1.5s infinite;
+}
+
+.s-fi {
+  background-image: linear-gradient(225deg, #facc89, #f29b76);
+}
+
+.s-se {
+  background-image: linear-gradient(135deg, #89abda, #85ccc9);
+}
+
+.s-th {
+  background-image: linear-gradient(225deg, #8ac998, #cce199);
+}
+
+.s-fo {
+  background-image: linear-gradient(135deg, #8957a1, #f19fc2);
+}
+
+.v-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.h-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-box {
+  display: block;
+  height: 100px;
+}
+
+span.headline {
+  font-size: 81px;
+  background-image: linear-gradient(45deg, #f29b76, #facc89, #cce199, #8ac998, #85ccc9, #89abda, #8957a1, #f19fc2);
+  /* animation: rotate-angle 5s linear infinite; */
+}
+
+@keyframes rotate-angle {
+  0% {
+    --rotate: 0deg;
+  }
+
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+span.foot {
+  font-size: 24px;
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  color: #555;
+}
+
+span.foot:hover,
+a:hover,
+a:link:hover,
+a:visited:hover {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: #55555570;
+  background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+  animation: rotate-angle 5s linear infinite;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #555;
+}
