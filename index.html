@@ -3,39 +3,70 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>烟火</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" size="64x64">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="shortcut icon" href="./flower.png" type="image/x-icon">
   <script>
     var _hmt = _hmt || [];
-    (function() {
+    (function () {
       var hm = document.createElement("script");
       hm.src = "https://hm.baidu.com/hm.js?807dea1b95e976be1d57d805f0c9a338";
-      var s = document.getElementsByTagName("script")[0]; 
+      var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
-    </script>
+  </script>
+  <title>2023新春快乐</title>
+  <script type="module" crossorigin src="./assets/index-6a32ae2b.js"></script>
+  <link rel="stylesheet" href="./assets/index-e46bed88.css">
 </head>
 
 <body>
-  <audio id="bgMusic">
-    <source = src="./hsf.mp3" type="audio/mp3">
-</audio>
-  <canvas id="canvas">Canvas is not supported in your browser.</canvas>
-  <div class="tips" id="tips">
-    <span>横向滑动燃放焰火</span>
+  <audio id="bgm">
+    <source src="./8bit.mp3" type="audio/mp3">
+  </audio>
+  <canvas id="canvas"></canvas>
+  <div class="card">
+    <div class="v-box">
+      <div class="empty-box"></div>
+      <div>
+        <span class="headline">我的朋友</span>
+      </div>
+      <div class="h-box">
+        <span class="s-fi">2</span>
+        <span class="s-se">0</span>
+        <span class="s-th">2</span>
+        <span class="s-fo">3</span>
+      </div>
+      <div class="h-box sub">
+        <span class="sub-fi">新</span>
+        <span class="sub-se">春</span>
+        <span class="sub-th">快</span>
+        <span class="sub-fo">乐</span>
+      </div>
+      <div class="empty-box"></div>
+      <div class="empty-box logos">
+        <img class="rabbit" src="./rabbit.svg">
+        <img class="rabbit" src="./rabbit.svg">
+        <img class="rabbit" src="./rabbit.svg">
+      </div>
+      <footer>
+        <span class="foot">
+          by
+          <a href="https://www.lollipopnougat.top">
+            lollipopnougat
+          </a>
+        </span>
+      </footer>
+    </div>
   </div>
-  <div class="con" id="con">
-    <h1 class="headline" id="head"> </h1>
-    <h1 class="headline2" id="head2"> </h1>
+  <div class="cover">
+    <img class="logo" src="./rabbit.svg">
+    <span class="cover-headline">2023<br>癸卯年</span>
+    <div class="empty-box"></div>
+    <span class="cover-tip">点击任意位置继续</span>
   </div>
-  <div class="img" id="imgdiv">
-    <image src="./hsf2022.jpg" id="img"/>
-  </div>
-  <!-- setup our canvas element -->
-  <!-- partial -->
-  <script src="./js/main.js"></script>
-
+  <!-- <script src="./js/Band.min.js"></script> -->
+  
 </body>
 
 </html>
